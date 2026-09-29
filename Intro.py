@@ -54,12 +54,6 @@ st.markdown("""
         text-shadow: 1px 1px #ff007f;
     }
     
-    /* Barra lateral estilo Y2K Cyber Space */
-    div[data-testid="stSidebar"] {
-        background-color: #100a1d !important;
-        border-right: 2px solid #ff007f;
-    }
-    
     /* Tarjetas de aplicaciones estilo ventana de blog retro */
     .cyber-card {
         background-color: #140d24;
@@ -110,19 +104,6 @@ st.markdown("""
 # TÍTULO PRINCIPAL
 # -----------------------------------------------------------------------------
 st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
-
-# -----------------------------------------------------------------------------
-# BARRA LATERAL (LIMPIA, SIN LA SECCIÓN DE PERFIL ANTERIOR)
-# -----------------------------------------------------------------------------
-with st.sidebar:
-    st.markdown("<p style='color: #ff007f; font-weight: bold; border-bottom: 2px solid #ff007f; padding-bottom: 5px;'>🎵 Background Music</p>", unsafe_allow_html=True)
-    st.audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
-    st.markdown("<p style='font-size: 11px; color: #a1887f;'>Sonando desde los archivos locales.</p>", unsafe_allow_html=True)
-    
-    st.markdown("---")
-    url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
-    st.subheader("🔗 Enlaces Clave")
-    st.write(f"Páginas y ejercicios: [Acceder]({url_ia})")
 
 # Función auxiliar para incrustar las vistas previas de las apps
 def render_preview(url):
