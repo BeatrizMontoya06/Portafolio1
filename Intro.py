@@ -81,7 +81,10 @@ st.write("")
 # -----------------------------------------------------------------------------
 with st.sidebar:
     st.subheader("🌸 Sobre Mí & IA")
-    st.image("OIG5.jpg", width=150) # Imagen decorativa de perfil en la sidebar
+    try:
+        st.image("OIG5.jpg", width=150)
+    except:
+        pass
     st.markdown("---")
     parrafo = (
         "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
@@ -96,101 +99,101 @@ with st.sidebar:
     st.markdown("✨ *¡Deja tu huella en el guestbook!* ✨")
 
 # -----------------------------------------------------------------------------
-# DISTRIBUCIÓN EN 3 COLUMNAS (ESTILO POSTS DE BLOG)
+# DISTRIBUCIÓN EN 3 COLUMNAS (ESTILO POSTS DE BLOG CON TUS NUEVOS ENLACES)
 # -----------------------------------------------------------------------------
 col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("🎙️ Texto a Voz")
+    st.subheader("🗣️ Voz a Texto")
     try:
         st.image(Image.open('txt_to_audio2.png'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("¡Escucha cómo el texto cobra vida con esta aplicación!")
-    st.markdown("[🔗 Enlace a Texto a Voz](https://imultimod.streamlit.app/)")
+    st.write("Convierte la voz en texto de forma rápida y sencilla.")
+    st.markdown("[🔗 Enlace](https://textoavozbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("👁️ Reconocimiento de Objetos")
+    st.subheader("🌐 Traductor")
     try:
         st.image(Image.open('txt_to_audio.png'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Descubre cómo detectamos objetos en tiempo real con YOLO.")
-    st.markdown("[🔗 Enlace a YOLO](https://yolov5cmc.streamlit.app/)")
+    st.write("Traductor inteligente para comunicarte sin barreras.")
+    st.markdown("[🔗 Enlace](https://traductorbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("🤖 Entrenando Modelos")
+    st.subheader("🎧 Texto a Audio")
     try:
         st.image(Image.open('OIG5.jpg'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Mira cómo puedes integrar y usar tu propio modelo entrenado.")
-    st.markdown("[🔗 Enlace al Modelo](https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/)")
+    st.write("Aplicación OCR y conversión de texto a audio multimedia.")
+    st.markdown("[🔗 Enlace](https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col2:
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("🗣️ Voz a Texto")
+    st.subheader("☁️ Nube de Palabras")
     try:
         st.image(Image.open('OIG8.jpg'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Convierte tus palabras habladas en texto escrito al instante.")
-    st.markdown("[🔗 Enlace a Voz a Texto](https://traductorw.streamlit.app/)")
+    st.write("Visualiza la frecuencia de tus términos con nubes de palabras.")
+    st.markdown("[🔗 Enlace](https://wordcloudbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("📊 Análisis de Datos")
+    st.subheader("❤️ Análisis de Sentimientos")
     try:
         st.image(Image.open('data_analisis.png'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Analiza datos complejos de forma inteligente usando agentes.")
-    st.markdown("[🔗 Enlace a Datos](https://dataagente.streamlit.app/)")
+    st.write("Descubre la emoción o polaridad oculta detrás de un texto.")
+    st.markdown("[🔗 Enlace](https://asentimientosbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("📼 Transcriptor Audio/Video")
+    st.subheader("📝 Análisis de Texto")
     try:
         st.image(Image.open('OIG3.jpg'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Realiza transcripciones automáticas de tus archivos multimedia.")
-    st.markdown("[🔗 Enlace a Transcriptor](https://transcript-whisper.streamlit.app/)")
+    st.write("Herramienta completa para procesar y analizar textos.")
+    st.markdown("[🔗 Enlace](https://astextobeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col3:
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("📚 Generación en Contexto")
+    st.subheader("🔍 Detector de Objetos")
     try:
         st.image(Image.open('Chat_pdf.png'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Chatea directamente con tus documentos PDF usando RAG.")
-    st.markdown("[🔗 Enlace a RAG (PDF)](https://chatpdf-cc.streamlit.app/)")
+    st.write("Identifica y detecta objetos visuales con inteligencia artificial.")
+    st.markdown("[🔗 Enlace](https://detectordeobjetosbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("🖼️ Análisis de Imagen")
+    st.subheader("👋 Gesto / Movimiento")
     try:
         st.image(Image.open('OIG4.jpg'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Explora la capacidad de comprensión visual avanzada.")
-    st.markdown("[🔗 Enlace a Vision](https://vision2-gpt4o.streamlit.app/)")
+    st.write("Detección de gestos y movimientos con Teachable Machine.")
+    st.markdown("[🔗 Enlace](https://tmbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="blog-card">', unsafe_allow_html=True)
-    st.subheader("⚡ Sistema Ciberfísico")
+    st.subheader("🔤 Detector de Texto")
     try:
         st.image(Image.open('OIG6.jpg'), width=180)
     except:
         st.write("[Imagen no encontrada]")
-    st.write("Experimenta la interacción directa con el mundo físico.")
-    st.markdown("[🔗 Enlace a Ciberfísico](https://vision2-gpt4o.streamlit.app/)")
+    st.write("Reconocimiento óptico de caracteres (OCR) integrado.")
+    st.markdown("[🔗 Enlace](https://detectordetextobeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Pie de página estilo blog retro
