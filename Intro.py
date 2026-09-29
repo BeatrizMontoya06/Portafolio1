@@ -10,11 +10,10 @@ st.set_page_config(
     layout="wide"
 )
 
-# Estilo visual basado exactamente en tu captura: fondo oscuro con patrón sutil punteado,
-# barras amarillas superiores, tipografías estilo arcade/pixel, bordes fucsia y acentos morados/neón.
+# Estilo visual oscuro con patrón de puntos digital y acentos neón Y2K
 st.markdown("""
     <style>
-    /* Fondo oscuro con patrón de puntos digital (estilo la imagen de referencia) */
+    /* Fondo oscuro con patrón de puntos digital */
     .stApp {
         background-color: #0b0714;
         background-image: radial-gradient(#251a3a 1px, transparent 1px);
@@ -23,7 +22,7 @@ st.markdown("""
         font-family: 'Courier New', Courier, monospace;
     }
     
-    /* Barra superior de marquesina/anuncio en color amarillo brillante */
+    /* Barra superior de marquesina en color amarillo brillante */
     .top-marquee {
         background-color: #ffcc00;
         color: #1a0826;
@@ -48,14 +47,14 @@ st.markdown("""
         margin-bottom: 25px;
     }
     
-    /* Estilo de los encabezados (h2, h3) */
+    /* Estilo de los encabezados */
     h2, h3 {
         color: #ffaa00 !important;
         font-family: 'Courier New', Courier, monospace;
         text-shadow: 1px 1px #ff007f;
     }
     
-    /* Barra lateral idéntica a la referencia: fondo oscuro profundo y bordes fucsia/morados */
+    /* Barra lateral estilo Y2K Cyber Space */
     div[data-testid="stSidebar"] {
         background-color: #100a1d !important;
         border-right: 2px solid #ff007f;
@@ -99,7 +98,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# BARRA SUPERIOR AMARILLA (ESTILO LA REFERENCIA)
+# BARRA SUPERIOR AMARILLA
 # -----------------------------------------------------------------------------
 st.markdown("""
     <div class="top-marquee">
@@ -113,29 +112,10 @@ st.markdown("""
 st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# BARRA LATERAL (PERFIL / SOBRE MÍ / MÚSICA - IDÉNTICO A TU CAPTURA)
+# BARRA LATERAL (LIMPIA, SIN LA SECCIÓN DE PERFIL ANTERIOR)
 # -----------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("<p style='color: #ff007f; font-weight: bold; border-bottom: 2px solid #ff007f; padding-bottom: 5px;'>🌸 PERFIL / SOBRE MÍ</p>", unsafe_allow_html=True)
-    
-    try:
-        st.image("OIG5.jpg", width=220)
-    except:
-        pass
-    
-    st.markdown("<p style='font-size: 13px; color: #ffcc00;'>⭐ Bea @ Y2K Cyber Space ⭐</p>", unsafe_allow_html=True)
-    st.markdown("---")
-    
-    parrafo = (
-        "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-        "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-        "resulta en una mayor eficiencia y precisión en diversos campos."
-    )
-    st.write(parrafo)
-    
-    st.markdown("---")
-    st.markdown("<p style='color: #ff007f; font-weight: bold;'>🎵 Background Music</p>", unsafe_allow_html=True)
-    # Reproductor simulado / widget de audio estilo reproductor de los 2000s
+    st.markdown("<p style='color: #ff007f; font-weight: bold; border-bottom: 2px solid #ff007f; padding-bottom: 5px;'>🎵 Background Music</p>", unsafe_allow_html=True)
     st.audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
     st.markdown("<p style='font-size: 11px; color: #a1887f;'>Sonando desde los archivos locales.</p>", unsafe_allow_html=True)
     
@@ -152,7 +132,7 @@ def render_preview(url):
 # CONTENIDO PRINCIPAL: PORTAFOLIO DE APLICACIONES (3 COLUMNAS)
 # -----------------------------------------------------------------------------
 st.markdown("### 🗂️ APLICACIONES Y PROYECTOS DE INTELIGENCIA ARTIFICIAL")
-st.write("Explora las vistas previa interactivas de cada herramienta desarrollada en el sistema:")
+st.write("Explora las vistas previas interactivas de cada herramienta desarrollada en el sistema:")
 st.write("")
 
 col1, col2, col3 = st.columns(3, gap="medium")
