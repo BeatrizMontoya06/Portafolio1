@@ -105,12 +105,15 @@ st.markdown("""
 # -----------------------------------------------------------------------------
 st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
 
+# Función auxiliar para incrustar las vistas previas de las apps
+def render_preview(url):
+    components.iframe(f"{url}?embed=true", height=200, scrolling=False)
+
 # -----------------------------------------------------------------------------
 # CONTENIDO PRINCIPAL: PORTAFOLIO DE APLICACIONES (3 COLUMNAS)
-# Mostramos tarjetas limpias con enlaces directos en lugar de iframes que activan la cámara/permisos automáticamente.
 # -----------------------------------------------------------------------------
 st.markdown("### 🗂️ APLICACIONES Y PROYECTOS DE INTELIGENCIA ARTIFICIAL")
-st.write("Haz clic en cualquier aplicación para abrirla de forma segura en una nueva pestaña:")
+st.write("Explora las vistas previas interactivas de cada herramienta desarrollada en el sistema:")
 st.write("")
 
 col1, col2, col3 = st.columns(3, gap="medium")
@@ -118,24 +121,28 @@ col1, col2, col3 = st.columns(3, gap="medium")
 with col1:
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🚀 00. Intro Portal")
+    render_preview("https://introbeatrizmontoya.streamlit.app/")
     st.write("Punto de entrada principal al sistema.")
     st.markdown("[🔗 Abrir App Completa](https://introbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🗣️ 01. Voz a Texto")
+    render_preview("https://textoavozbeatrizmontoya.streamlit.app/")
     st.write("Convierte la voz en texto de forma rápida.")
     st.markdown("[🔗 Abrir App Completa](https://textoavozbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🌐 02. Traductor")
+    render_preview("https://traductorbeatrizmontoya.streamlit.app/")
     st.write("Traductor inteligente sin barreras.")
     st.markdown("[🔗 Abrir App Completa](https://traductorbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🎧 03. Texto a Audio")
+    render_preview("https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/")
     st.write("OCR y conversión multimedia.")
     st.markdown("[🔗 Abrir App Completa](https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
@@ -143,18 +150,21 @@ with col1:
 with col2:
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("☁️ 04. Nube de Palabras")
+    render_preview("https://wordcloudbeatrizmontoya.streamlit.app/")
     st.write("Visualiza frecuencias de términos.")
     st.markdown("[🔗 Abrir App Completa](https://wordcloudbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("❤️ 05. Sentimientos")
+    render_preview("https://asentimientosbeatrizmontoya.streamlit.app/")
     st.write("Descubre la polaridad en textos.")
     st.markdown("[🔗 Abrir App Completa](https://asentimientosbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("📝 06. Análisis de Texto")
+    render_preview("https://astextobeatrizmontoya.streamlit.app/")
     st.write("Procesa y analiza contenidos escritos.")
     st.markdown("[🔗 Abrir App Completa](https://astextobeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
@@ -162,18 +172,21 @@ with col2:
 with col3:
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🔍 07. Detector Objetos")
+    render_preview("https://detectordeobjetosbeatrizmontoya.streamlit.app/")
     st.write("Identifica elementos visuales con IA.")
     st.markdown("[🔗 Abrir App Completa](https://detectordeobjetosbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("👋 08. Gestos / Movimiento")
+    render_preview("https://tmbeatrizmontoya.streamlit.app/")
     st.write("Detección mediante modelos entrenados.")
     st.markdown("[🔗 Abrir App Completa](https://tmbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
     st.subheader("🔤 09. Detector de Texto")
+    render_preview("https://detectordetextobeatrizmontoya.streamlit.app/")
     st.write("Reconocimiento óptico (OCR).")
     st.markdown("[🔗 Abrir App Completa](https://detectordetextobeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
