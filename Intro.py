@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit.components.v1 as components
+from PIL import Image
 
 # -----------------------------------------------------------------------------
 # CONFIGURACIÓN DE LA PÁGINA (ESTILO CYBER SPACE / BEATRIZ'S HIVE - 2000s)
@@ -105,23 +107,19 @@ st.markdown("""
 st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# SECCIÓN INFERIOR / COMPLEMENTARIA: MÚSICA Y ENLACES CLAVE INTEGRADOS
+# BARRA LATERAL (PERFIL Y ENLACE GENERAL)
 # -----------------------------------------------------------------------------
-st.markdown("---")
-col_audio, col_links = st.columns(2, gap="large")
-
-with col_audio:
-    st.markdown("### 🎵 Background Music")
-    st.audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
-    st.markdown("<p style='font-size: 11px; color: #a1887f;'>Sonando desde los archivos locales.</p>", unsafe_allow_html=True)
-
-with col_links:
-    st.markdown("### 🔗 Enlaces Clave")
-    url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
-    st.write(f"Páginas y ejercicios prácticos: [Acceder al sitio principal]({url_ia})")
-    st.markdown("✨ *¡Gracias por visitar mi espacio y explorar la tecnología interactiva!* ✨")
-
-st.markdown("---")
+with st.sidebar:
+  st.subheader("Aplicaciones de IA.")
+  parrafo = (
+    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
+    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
+    "resulta en una mayor eficiencia y precisión en diversos campos."
+  )
+  st.write(parrafo)
+  st.markdown("---")
+  url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
+  st.write(f"🌐 [Sitio de Prácticas y Enlaces]({url_ia})")
 
 # -----------------------------------------------------------------------------
 # CONTENIDO PRINCIPAL: PORTAFOLIO DE APLICACIONES (3 COLUMNAS)
@@ -134,65 +132,103 @@ col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🚀 00. Intro Portal")
-    st.write("Punto de entrada principal al sistema.")
-    st.markdown("[🔗 Abrir App Completa](https://introbeatrizmontoya.streamlit.app/)")
+    st.subheader("🔊 Texto a Voz")
+    st.write("Uso de aplicaciones de IA para texto a voz.")
+    st.markdown("[🔗 Abrir Texto a Voz](https://imultimod.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🗣️ 01. Voz a Texto")
-    st.write("Convierte la voz en texto de forma rápida.")
-    st.markdown("[🔗 Abrir App Completa](https://textoavozbeatrizmontoya.streamlit.app/)")
+    st.subheader("🎯 Reconocimiento de Objetos")
+    st.write("Detección de objetos en imágenes (YOLOv5).")
+    st.markdown("[🔗 Abrir YOLO](https://yolov5cmc.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🌐 02. Traductor")
-    st.write("Traductor inteligente sin barreras.")
-    st.markdown("[🔗 Abrir App Completa](https://traductorbeatrizmontoya.streamlit.app/)")
+    st.subheader("🤖 Entrenando Modelos")
+    st.write("Uso de modelos entrenados personalizados.")
+    st.markdown("[🔗 Abrir Modelo](https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🎧 03. Texto a Audio")
-    st.write("OCR y conversión multimedia.")
-    st.markdown("[🔗 Abrir App Completa](https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with col2:
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("☁️ 04. Nube de Palabras")
-    st.write("Visualiza frecuencias de términos.")
-    st.markdown("[🔗 Abrir App Completa](https://wordcloudbeatrizmontoya.streamlit.app/)")
+    st.subheader("📜 Generador Texto LSTM")
+    st.write("Generación de texto con redes neuronales LSTM.")
+    st.markdown("[🔗 Abrir Generador LSTM](https://lstmnlpbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("❤️ 05. Sentimientos")
-    st.write("Descubre la polaridad en textos.")
-    st.markdown("[🔗 Abrir App Completa](https://asentimientosbeatrizmontoya.streamlit.app/)")
+    st.subheader("📊 Tablero Inteligente")
+    st.write("Tablero interactivo e inteligente.")
+    st.markdown("[🔗 Abrir Tablero](https://histinfbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+
+with col2: 
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🎤 Voz a Texto")
+    st.write("Aplicación de conversión de voz a texto.")
+    st.markdown("[🔗 Abrir Voz a Texto](https://traductorw.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("📝 06. Análisis de Texto")
-    st.write("Procesa y analiza contenidos escritos.")
-    st.markdown("[🔗 Abrir App Completa](https://astextobeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with col3:
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🔍 07. Detector Objetos")
-    st.write("Identifica elementos visuales con IA.")
-    st.markdown("[🔗 Abrir App Completa](https://detectordeobjetosbeatrizmontoya.streamlit.app/)")
+    st.subheader("📈 Análisis de Datos")
+    st.write("Análisis de datos utilizando agentes inteligentes.")
+    st.markdown("[🔗 Abrir Agente de Datos](https://dataagente.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("👋 08. Gestos / Movimiento")
-    st.write("Detección mediante modelos entrenados.")
-    st.markdown("[🔗 Abrir App Completa](https://tmbeatrizmontoya.streamlit.app/)")
+    st.subheader("📼 Transcriptor Audio/Video")
+    st.write("Transcripciones automáticas con Whisper.")
+    st.markdown("[🔗 Abrir Transcriptor](https://transcript-whisper.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🔤 09. Detector de Texto")
-    st.write("Reconocimiento óptico (OCR).")
-    st.markdown("[🔗 Abrir App Completa](https://detectordetextobeatrizmontoya.streamlit.app/)")
+    st.subheader("⚡ Generación Aumentada")
+    st.write("Generación aumentada (RAG) para chat con documentos.")
+    st.markdown("[🔗 Abrir ChatPDF](https://chatpdfbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("📡 RecepMqtt")
+    st.write("Recepción de datos y telemetría mediante MQTT.")
+    st.markdown("[🔗 Abrir RecepMqtt](https://recepmqttbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+
+with col3: 
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("💬 Generación en Contexto")
+    st.write("Aplicación que usa RAG a partir de un documento PDF.")
+    st.markdown("[🔗 Abrir RAG PDF](https://chatpdf-cc.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("📷 Análisis de Imagen")
+    st.write("Capacidad avanzada de análisis visual.")
+    st.markdown("[🔗 Abrir Vision GPT-4o](https://vision2-gpt4o.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🕹️ Vision App")
+    st.write("Aplicación especializada en visión artificial.")
+    st.markdown("[🔗 Abrir Vision App](https://visionappbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🔢 Mnist")
+    st.write("Predicción de dígitos escritos a mano.")
+    st.markdown("[🔗 Abrir Mnist Pred](https://mnistpredbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🚀 Send Mqtt")
+    st.write("Envío de comandos por protocolo MQTT.")
+    st.markdown("[🔗 Abrir Send Mqtt](https://sendcmqttbeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🎙️ Control Voice")
+    st.write("Control de dispositivos mediante comandos de voz.")
+    st.markdown("[🔗 Abrir Control Voice](https://ctrlvoicebeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Pie de página
