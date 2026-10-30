@@ -1,200 +1,142 @@
 import streamlit as st
-import streamlit.components.v1 as components
+from PIL import Image
+st.title("Aplicaciones de Inteligencia Artificial.")
 
-# -----------------------------------------------------------------------------
-# CONFIGURACIÓN DE LA PÁGINA (ESTILO CYBER SPACE / BEATRIZ'S HIVE - 2000s)
-# -----------------------------------------------------------------------------
-st.set_page_config(
-    page_title="Bea's Cyber Space 🐝", 
-    page_icon="⭐", 
-    layout="wide"
-)
+with st.sidebar:
+  st.subheader("Aplicaciones con Inteligencia Artificial.")
+  parrafo = (
+    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
+    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
+    "resulta en una mayor eficiencia y precisión en diversos campos."
+  )
+  st.write(parrafo)
 
-# Estilo visual oscuro con patrón de puntos digital y acentos neón Y2K
-st.markdown("""
-    <style>
-    /* Fondo oscuro con patrón de puntos digital */
-    .stApp {
-        background-color: #0b0714;
-        background-image: radial-gradient(#251a3a 1px, transparent 1px);
-        background-size: 20px 20px;
-        color: #d1c4e9;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    /* Barra superior de marquesina en color amarillo brillante */
-    .top-marquee {
-        background-color: #ffcc00;
-        color: #1a0826;
-        padding: 8px 15px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 14px;
-        border: 2px dashed #ff007f;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.4);
-    }
-    
-    /* Título principal brillante tipo web retro */
-    .main-title {
-        text-align: center;
-        color: #ffaa00 !important;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 36px;
-        font-weight: bold;
-        text-shadow: 2px 2px #ff007f, 0px 0px 10px rgba(255, 170, 0, 0.6);
-        margin-bottom: 25px;
-    }
-    
-    /* Estilo de los encabezados */
-    h2, h3 {
-        color: #ffaa00 !important;
-        font-family: 'Courier New', Courier, monospace;
-        text-shadow: 1px 1px #ff007f;
-    }
-    
-    /* Tarjetas de aplicaciones estilo ventana de blog retro */
-    .cyber-card {
-        background-color: #140d24;
-        border: 2px solid #ff007f;
-        border-radius: 6px;
-        padding: 15px;
-        margin-bottom: 25px;
-        box-shadow: 4px 4px 0px #7b1fa2;
-        transition: 0.2s ease;
-    }
-    
-    .cyber-card:hover {
-        border-color: #ffcc00;
-        box-shadow: 4px 4px 0px #ff007f;
-    }
-    
-    /* Enlaces y botones estilizados */
-    a {
-        color: #00e5ff !important;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    a:hover {
-        color: #ff007f !important;
-        text-decoration: underline;
-    }
-    
-    .stButton>button {
-        background-color: #ff007f !important;
-        color: #ffffff !important;
-        border: 2px solid #ffcc00;
-        font-weight: bold;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# -----------------------------------------------------------------------------
-# BARRA SUPERIOR AMARILLA
-# -----------------------------------------------------------------------------
-st.markdown("""
-    <div class="top-marquee">
-        🐝 Bienvenid@ a Bea's Hive ✦ Diseño Interactivo ✦ Experiencias Inmersivas ✦ Arte, Narrativa & Tecnología ✦ ¡Explora mis proyectos! 🚀
-    </div>
-""", unsafe_allow_html=True)
-
-# -----------------------------------------------------------------------------
-# TÍTULO PRINCIPAL
-# -----------------------------------------------------------------------------
-st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
-
-# Función auxiliar para incrustar las vistas previas de las apps
-def render_preview(url):
-    components.iframe(f"{url}?embed=true", height=200, scrolling=False)
-
-# -----------------------------------------------------------------------------
-# CONTENIDO PRINCIPAL: PORTAFOLIO DE APLICACIONES (3 COLUMNAS)
-# -----------------------------------------------------------------------------
-st.markdown("### 🗂️ APLICACIONES Y PROYECTOS DE INTELIGENCIA ARTIFICIAL")
-st.write("Explora las vistas previas interactivas de cada herramienta desarrollada en el sistema:")
-st.write("")
-
-col1, col2, col3 = st.columns(3, gap="medium")
+url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
+st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
+st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🚀 00. Intro Portal")
-    render_preview("https://introbeatrizmontoya.streamlit.app/")
-    st.write("Punto de entrada principal al sistema.")
-    st.markdown("[🔗 Abrir App Completa](https://introbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ 
+ st.subheader("Conversión de texto a voz")
+ image = Image.open('txt_to_audio2.png')
+ st.image(image, width=190)
+ st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
+ url = "https://imultimod.streamlit.app/"
+ st.write(f"Texto a voz: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🗣️ 01. Voz a Texto")
-    render_preview("https://textoavozbeatrizmontoya.streamlit.app/")
-    st.write("Convierte la voz en texto de forma rápida.")
-    st.markdown("[🔗 Abrir App Completa](https://textoavozbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Reconocimiento de Objetos")
+ image = Image.open('txt_to_audio.png')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
+ url = "https://yolov5cmc.streamlit.app/"
+ st.write(f"YOLO: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🌐 02. Traductor")
-    render_preview("https://traductorbeatrizmontoya.streamlit.app/")
-    st.write("Traductor inteligente sin barreras.")
-    st.markdown("[🔗 Abrir App Completa](https://traductorbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Entrenando Modelos")
+ image = Image.open('OIG5.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
+ url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
+ st.write(f"YOLO: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🎧 03. Texto a Audio")
-    render_preview("https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/")
-    st.write("OCR y conversión multimedia.")
-    st.markdown("[🔗 Abrir App Completa](https://ocr-audio-fkottyqbdcwtbbvr2sykwb.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Generador Texto LSTM")
+ image = Image.open('OIG4.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace usaremos el generador de texto LSTM.") 
+ url = "https://lstmnlpbeatrizmontoya.streamlit.app/"
+ st.write(f"LSTM: [Enlace]({url})")
 
-with col2:
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("☁️ 04. Nube de Palabras")
-    render_preview("https://wordcloudbeatrizmontoya.streamlit.app/")
-    st.write("Visualiza frecuencias de términos.")
-    st.markdown("[🔗 Abrir App Completa](https://wordcloudbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Tablero inteligente")
+ image = Image.open('data_analisis.png')
+ st.image(image, width=190)
+ st.write("En la siguiente enlace veremos el tablero inteligente.") 
+ url = "https://histinfbeatrizmontoya.streamlit.app/"
+ st.write(f"Tablero: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("❤️ 05. Sentimientos")
-    render_preview("https://asentimientosbeatrizmontoya.streamlit.app/")
-    st.write("Descubre la polaridad en textos.")
-    st.markdown("[🔗 Abrir App Completa](https://asentimientosbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("📝 06. Análisis de Texto")
-    render_preview("https://astextobeatrizmontoya.streamlit.app/")
-    st.write("Procesa y analiza contenidos escritos.")
-    st.markdown("[🔗 Abrir App Completa](https://astextobeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+with col2: 
+ st.subheader("Conversión de voz a texto")
+ image = Image.open('OIG8.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
+ url = "https://traductorw.streamlit.app/"
+ st.write(f"Voz a texto: [Enlace]({url})")
 
-with col3:
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🔍 07. Detector Objetos")
-    render_preview("https://detectordeobjetosbeatrizmontoya.streamlit.app/")
-    st.write("Identifica elementos visuales con IA.")
-    st.markdown("[🔗 Abrir App Completa](https://detectordeobjetosbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Análisis de Datos")
+ image = Image.open('data_analisis.png')
+ st.image(image, width=190)
+ st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
+ url = "https://dataagente.streamlit.app/"
+ st.write(f"Datos: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("👋 08. Gestos / Movimiento")
-    render_preview("https://tmbeatrizmontoya.streamlit.app/")
-    st.write("Detección mediante modelos entrenados.")
-    st.markdown("[🔗 Abrir App Completa](https://tmbeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Transcriptor Audio y Video")
+ image = Image.open('OIG3.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
+ url = "https://transcript-whisper.streamlit.app/"
+ st.write(f"Transcriptor: [Enlace]({url})")
 
-    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
-    st.subheader("🔤 09. Detector de Texto")
-    render_preview("https://detectordetextobeatrizmontoya.streamlit.app/")
-    st.write("Reconocimiento óptico (OCR).")
-    st.markdown("[🔗 Abrir App Completa](https://detectordetextobeatrizmontoya.streamlit.app/)")
-    st.markdown('</div>', unsafe_allow_html=True)
+ st.subheader("Generación Aumentada")
+ image = Image.open('Chat_pdf.png')
+ st.image(image, width=190)
+ st.write("En la siguiente veremos una aplicación que usa generación aumentada.") 
+ url = "https://chatpdfbeatrizmontoya.streamlit.app/"
+ st.write(f"Generacion Aumentada: [Enlace]({url})")
 
-# Pie de página
-st.markdown("---")
-st.markdown("""
-    <p style='text-align: center; color: #ff007f; font-family: "Courier New", Courier, monospace; font-size: 12px;'>
-        [:: BEA'S CYBER SPACE • 2000S RETRO VIBES • ALL RIGHTS RESERVED ::]
-    </p>
-""", unsafe_allow_html=True)
+ st.subheader("RecepMqtt")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos la recepción MQTT.") 
+ url = "https://recepmqttbeatrizmontoya.streamlit.app/"
+ st.write(f"RecepMqtt: [Enlace]({url})")
+
+
+with col3: 
+ st.subheader("Generación en Contexto")
+ image = Image.open('Chat_pdf.png')
+ st.image(image, width=190)
+ st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
+ url = "https://chatpdf-cc.streamlit.app/"
+ st.write(f"RAG: [Enlace]({url})")
+
+ st.subheader("Análisis de Imagen")
+ image = Image.open('OIG4.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
+ url = "https://vision2-gpt4o.streamlit.app/"
+ st.write(f"Vision: [Enlace]({url})")
+ 
+ st.subheader("Sistema Ciberfísico")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
+ url = "https://vision2-gpt4o.streamlit.app/"
+ st.write(f"Vision: [Enlace]({url})")
+
+ st.subheader("Vision app")
+ image = Image.open('OIG4.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos la aplicación de visión.") 
+ url = "https://visionappbeatrizmontoya.streamlit.app/"
+ st.write(f"Vision app: [Enlace]({url})")
+
+ st.subheader("Mnist")
+ image = Image.open('OIG5.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos la aplicación MNIST.") 
+ url = "https://mnistpredbeatrizmontoya.streamlit.app/"
+ st.write(f"Mnist: [Enlace]({url})")
+
+ st.subheader("sendcmqtt")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos el envío MQTT.") 
+ url = "https://sendcmqttbeatrizmontoya.streamlit.app/"
+ st.write(f"sendcmqtt: [Enlace]({url})")
+
+ st.subheader("control voice")
+ image = Image.open('txt_to_audio2.png')
+ st.image(image, width=190)
+ st.write("En la siguiente enlace veremos el control por voz.") 
+ url = "https://ctrlvoicebeatrizmontoya.streamlit.app/"
+ st.write(f"control voice: [Enlace]({url})")
