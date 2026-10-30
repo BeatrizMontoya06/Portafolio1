@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+
 st.title("Aplicaciones de Inteligencia Artificial.")
 
 with st.sidebar:
@@ -11,139 +12,123 @@ with st.sidebar:
   )
   st.write(parrafo)
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
+url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+st.write(f"Enlace para páginas y ejercicios: [Ver Sitio Web]({url_ia})")
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+    st.subheader("Conversión de texto a voz")
+    image = Image.open('txt_to_audio2.png')
+    st.image(image, width=190)
+    st.write("Uso de aplicaciones de IA para texto a voz.") 
+    st.write("Enlace: [Texto a Voz](https://imultimod.streamlit.app/)")
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://yolov5cmc.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    st.subheader("Reconocimiento de Objetos")
+    image = Image.open('txt_to_audio.png')
+    st.image(image, width=200)
+    st.write("Detección de objetos en imágenes.") 
+    st.write("Enlace: [YOLO v5](https://yolov5cmc.streamlit.app/)")
 
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    st.subheader("Entrenando Modelos")
+    image = Image.open('OIG5.jpg')
+    st.image(image, width=200)
+    st.write("Uso de modelos entrenados personalizados.") 
+    st.write("Enlace: [Modelo Entrenado](https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 1
- st.subheader("Generador Texto LSTM")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En este enlace generaremos texto utilizando redes neuronales LSTM.") 
- url_lstm = "https://lstmnlpbeatrizmontoya.streamlit.app/"
- st.write(f"LSTM: [Enlace]({url_lstm})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("Generador Texto LSTM")
+    image = Image.open('OIG4.jpg')
+    st.image(image, width=200)
+    st.write("Generación de texto con redes neuronales LSTM.") 
+    st.write("Enlace: [Generador LSTM](https://lstmnlpbeatrizmontoya.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 1
- st.subheader("Tablero Inteligente")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En este enlace exploraremos un tablero interactivo e inteligente.") 
- url_tablero = "https://histinfbeatrizmontoya.streamlit.app/"
- st.write(f"Tablero: [Enlace]({url_tablero})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("Tablero Inteligente")
+    image = Image.open('data_analisis.png')
+    st.image(image, width=190)
+    st.write("Tablero interactivo e inteligente.") 
+    st.write("Enlace: [Tablero Inteligente](https://histinfbeatrizmontoya.streamlit.app/)")
 
 
 with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductorw.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
+    st.subheader("Conversión de voz a texto")
+    image = Image.open('OIG8.jpg')
+    st.image(image, width=200)
+    st.write("Aplicación de conversión de voz a texto.") 
+    st.write("Enlace: [Voz a Texto](https://traductorw.streamlit.app/)")
 
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://dataagente.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
+    st.subheader("Análisis de Datos")
+    image = Image.open('data_analisis.png')
+    st.image(image, width=190)
+    st.write("Análisis de datos utilizando agentes inteligentes.") 
+    st.write("Enlace: [Agente de Datos](https://dataagente.streamlit.app/)")
 
- st.subheader("Transcriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+    st.subheader("Transcriptor Audio y Video")
+    image = Image.open('OIG3.jpg')
+    st.image(image, width=200)
+    st.write("Transcripciones automáticas de audio y video.") 
+    st.write("Enlace: [Transcriptor](https://transcript-whisper.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 2
- st.subheader("Generación Aumentada (ChatPDF)")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("Aplicación basada en generación aumentada para interactuar con tus documentos.") 
- url_rag = "https://chatpdfbeatrizmontoya.streamlit.app/"
- st.write(f"ChatPDF: [Enlace]({url_rag})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("Generación Aumentada")
+    image = Image.open('Chat_pdf.png')
+    st.image(image, width=190)
+    st.write("Generación aumentada (RAG) para chat con documentos.") 
+    st.write("Enlace: [ChatPDF (Aumentada)](https://chatpdfbeatrizmontoya.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 2
- st.subheader("RecepMqtt")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("Recepción de datos y señales a través de protocolo MQTT.") 
- url_recepmqtt = "https://recepmqttbeatrizmontoya.streamlit.app/"
- st.write(f"RecepMqtt: [Enlace]({url_recepmqtt})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("RecepMqtt")
+    image = Image.open('OIG6.jpg')
+    st.image(image, width=200)
+    st.write("Recepción de datos y telemetría mediante MQTT.") 
+    st.write("Enlace: [RecepMqtt](https://recepmqttbeatrizmontoya.streamlit.app/)")
 
 
 with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+    st.subheader("Generación en Contexto")
+    image = Image.open('Chat_pdf.png')
+    st.image(image, width=190)
+    st.write("Aplicación que usa RAG a partir de un documento PDF.") 
+    st.write("Enlace: [RAG PDF](https://chatpdf-cc.streamlit.app/)")
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+    st.subheader("Análisis de Imagen")
+    image = Image.open('OIG4.jpg')
+    st.image(image, width=200)
+    st.write("Capacidad avanzada de análisis en imágenes.") 
+    st.write("Enlace: [Vision GPT-4o](https://vision2-gpt4o.streamlit.app/)")
+    
+    st.subheader("Sistema Ciberfísico")
+    image = Image.open('OIG6.jpg')
+    st.image(image, width=200)
+    st.write("Interacción con el mundo físico y sistemas ciberfísicos.") 
+    st.write("Enlace: [Sistema Ciberfísico](https://vision2-gpt4o.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 3
- st.subheader("Vision App")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("Aplicación especializada en visión artificial.") 
- url_vision = "https://visionappbeatrizmontoya.streamlit.app/"
- st.write(f"Vision App: [Enlace]({url_vision})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("Vision App")
+    image = Image.open('OIG4.jpg')
+    st.image(image, width=200)
+    st.write("Aplicación de visión artificial personalizada.") 
+    st.write("Enlace: [Vision App](https://visionappbeatrizmontoya.streamlit.app/)")
 
- # NUEVA AÑADIDA EN COL 3
- st.subheader("MNIST (Clasificación de Dígitos)")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("Predicción de dígitos escritos a mano utilizando el dataset MNIST.") 
- url_mnist = "https://mnistpredbeatrizmontoya.streamlit.app/"
- st.write(f"MNIST: [Enlace]({url_mnist})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("Mnist")
+    image = Image.open('OIG5.jpg')
+    st.image(image, width=200)
+    st.write("Predicción de dígitos escritos a mano (MNIST).") 
+    st.write("Enlace: [Mnist Pred](https://mnistpredbeatrizmontoya.streamlit.app/)")
 
- # NUEVAS ADICIONALES EN COL 3 (SendMqtt y Control Voice)
- st.subheader("SendMqtt")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("Envío de comandos y control a través de protocolo MQTT.") 
- url_sendmqtt = "https://sendcmqttbeatrizmontoya.streamlit.app/"
- st.write(f"SendMqtt: [Enlace]({url_sendmqtt})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("sendcmqtt")
+    image = Image.open('OIG6.jpg')
+    st.image(image, width=200)
+    st.write("Envío de comandos por protocolo MQTT.") 
+    st.write("Enlace: [Send Mqtt](https://sendcmqttbeatrizmontoya.streamlit.app/)")
 
- st.subheader("Control Voice")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("Aplicación de control remoto por medio de comandos de voz.") 
- url_ctrlvoice = "https://ctrlvoicebeatrizmontoya.streamlit.app/"
- st.write(f"Control Voice: [Enlace]({url_ctrlvoice})")
+    # --- NUEVA AÑADIDA ---
+    st.subheader("control voice")
+    image = Image.open('txt_to_audio2.png')
+    st.image(image, width=190)
+    st.write("Control de dispositivos mediante comandos de voz.") 
+    st.write("Enlace: [Control Voice](https://ctrlvoicebeatrizmontoya.streamlit.app/)")
