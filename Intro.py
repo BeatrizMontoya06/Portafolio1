@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 # -----------------------------------------------------------------------------
 # CONFIGURACIÓN DE LA PÁGINA (ESTILO CYBER SPACE / BEATRIZ'S HIVE - 2000s)
@@ -106,8 +105,26 @@ st.markdown("""
 st.markdown("<div class='main-title'>✨ * Welcome to Bea's Blog * ✨</div>", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
+# SECCIÓN INFERIOR / COMPLEMENTARIA: MÚSICA Y ENLACES CLAVE INTEGRADOS
+# -----------------------------------------------------------------------------
+st.markdown("---")
+col_audio, col_links = st.columns(2, gap="large")
+
+with col_audio:
+    st.markdown("### 🎵 Background Music")
+    st.audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
+    st.markdown("<p style='font-size: 11px; color: #a1887f;'>Sonando desde los archivos locales.</p>", unsafe_allow_html=True)
+
+with col_links:
+    st.markdown("### 🔗 Enlaces Clave")
+    url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
+    st.write(f"Páginas y ejercicios prácticos: [Acceder al sitio principal]({url_ia})")
+    st.markdown("✨ *¡Gracias por visitar mi espacio y explorar la tecnología interactiva!* ✨")
+
+st.markdown("---")
+
+# -----------------------------------------------------------------------------
 # CONTENIDO PRINCIPAL: PORTAFOLIO DE APLICACIONES (3 COLUMNAS)
-# Mostramos tarjetas limpias con enlaces directos en lugar de iframes que activan la cámara/permisos automáticamente.
 # -----------------------------------------------------------------------------
 st.markdown("### 🗂️ APLICACIONES Y PROYECTOS DE INTELIGENCIA ARTIFICIAL")
 st.write("Haz clic en cualquier aplicación para abrirla de forma segura en una nueva pestaña:")
