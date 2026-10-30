@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from PIL import Image
 
 # -----------------------------------------------------------------------------
 # CONFIGURACIÓN DE LA PÁGINA (ESTILO CYBER SPACE / BEATRIZ'S HIVE - 2000s)
@@ -229,6 +228,12 @@ with col3:
     st.subheader("🎙️ Control Voice")
     st.write("Control de dispositivos mediante comandos de voz.")
     st.markdown("[🔗 Abrir Control Voice](https://ctrlvoicebeatrizmontoya.streamlit.app/)")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('<div class="cyber-card">', unsafe_allow_html=True)
+    st.subheader("🔒 Cerradura Gestos")
+    st.write("Control de cerradura inteligente mediante reconocimiento de gestos por IA.")
+    st.markdown("[🔗 Abrir Cerradura Gestos](https://cerraduragestosbeatrizmontoya.streamlit.app/)")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Pie de página
